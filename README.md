@@ -10,7 +10,7 @@
 
 ## Introduction
 
-Ce projet a pour but de rentre l'installation d'automatiser l'installation d'un serveur Minecraft sur Linux OS. 
+Ce projet a pour but de rentre l'installation d'automatiser l'installation d'un serveur Minecraft sur Linux. 
 
 ## Présentation du projet
 
