@@ -1,5 +1,7 @@
 # Projet infra Ynov B1 2024
 
+![UwU](./logo.webp)
+
 ## Sommaire
 
 - [Sommaire](#sommaire)
