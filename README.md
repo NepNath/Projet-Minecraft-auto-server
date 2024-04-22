@@ -26,15 +26,18 @@ Il est conseillé de le mettre dans le dosser `/home` car le script crée des do
 
 ## Installation-et-utilisation
 
-[![Télécharger](https://img.shields.io/badge/T%C3%A9l%C3%A9charger-Fichier-blue)](https://raw.githubusercontent.com/NepNath/Projet-Minecraft-auto-server/main/autoserver.sh)
+[![Télécharger](https://img.shields.io/badge/T%C3%A9l%C3%A9charger-Fichier-blue)](https://github.com/NepNath/Projet-Minecraft-auto-server/releases/download/uptodate/autoserver.sh)
 
+Pour l'installation, vous avez besoin de faire ces commandes :
 
-Pour l'installation, vous avez juste besoin du script ! Il n'y a pas besoin de fichier anexe, simplement le script. 
-/!\ Attention, il est fortement conseiller de le lancer avec la commande suivante :
+```bash
+chmod +x ./autoserver.sh
+```
+/!\ Attention, il est fortement conseiller de lancer le script avec la commande suivante :
 ```bash 
 $ sudo ./autoserv.sh
 ``` 
- pour éviter tout problème.
+Vous avez juste besoin du script ! Il n'y a pas besoin de fichier anexe, simplement le script. 
 
 Une fois en votre posséssion, il vous suffira de lancer le script avec `./autoserver.sh` et de suivre les instructions indiqué par le script (ram allouée, version du serveur, etc...)
 
