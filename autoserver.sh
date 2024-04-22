@@ -1,5 +1,18 @@
 #!/bin/bash
 
+function check_and_install_java() {
+    if ! java -version 2>&1 >/dev/null ; then
+        printf "Java n'est pas installé. Installation de Java...\n"
+        sudo apt update && sudo apt install -y default-jdk
+        if [[ $? -ne 0 ]]; then
+            printf "Échec de l'installation de Java. Vérifiez votre connexion et vos sources de paquets.\n" >&2
+            exit 1
+        fi
+    else
+        printf "Java est déjà installé.\n"
+    fi
+}
+
 function read_version() {
     local valid_url=0
     while [[ $valid_url -eq 0 ]]; do
@@ -23,11 +36,11 @@ function read_version() {
 function read_ram() {
     local valid_ram=0
     while [[ $valid_ram -eq 0 ]]; do
-        printf "Quelle quantité de RAM souhaitez-vous allouer au serveur (en Go, maximum 6 Go) ? "
+        printf "Quelle quantité de RAM souhaitez-vous allouer au serveur (en Go, maximum 3 Go) ? "
         read -r ram
 
-        if [[ "$ram" -lt 1 || "$ram" -gt 6 ]]; then
-            printf "La quantité de RAM doit être comprise entre 1 et 6 Go.\n" >&2
+        if [[ "$ram" -lt 1 || "$ram" -gt 3 ]]; then
+            printf "La quantité de RAM doit être comprise entre 1 et 3 Go.\n" >&2
         else
             valid_ram=1
         fi
@@ -84,6 +97,7 @@ function display_server_info() {
 }
 
 function main() {
+    check_and_install_java
     read_version
     read_ram
     create_server_directory
