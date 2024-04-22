@@ -30,6 +30,11 @@ Il est conseillé de le mettre dans le dosser `/home` car le script crée des do
 
 
 Pour l'installation, vous avez juste besoin du script ! Il n'y a pas besoin de fichier anexe, simplement le script. 
+/!\ Attention, il est fortement conseiller de le lancer avec la commande suivante :
+```bash 
+$ sudo ./autoserv.sh
+``` 
+ pour éviter tout problème.
 
 Une fois en votre posséssion, il vous suffira de lancer le script avec `./autoserver.sh` et de suivre les instructions indiqué par le script (ram allouée, version du serveur, etc...)
 
